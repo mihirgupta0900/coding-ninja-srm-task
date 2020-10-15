@@ -82,6 +82,10 @@ h2 {
 	padding-right: 2em;
 }
 
+.link:hover {
+	opacity: 0.8;
+}
+
 .banner {
 	height: 70vh;
 	display: flex;
@@ -178,12 +182,14 @@ h2 {
 
 .contact > p {
 	width: 80%;
+	opacity: 0.9;
 }
 
 .contact > form {
 	display: flex;
 	flex-direction: column;
 	width: 20%;
+	margin-top: 3em;
 }
 
 .contact > form > input {
@@ -194,4 +200,16 @@ h2 {
 .contact > form > button {
 	width: 20%;
 	color: black;
+}
+
+.contact > form > input {
+	height: 2em;
+	padding: 0 0.5em;
+	background-color: rgb(233, 233, 233);
+	color: black;
+}
+
+.contact > form > button {
+	height: 2.5em;
+	width: 4.5em;
 }
