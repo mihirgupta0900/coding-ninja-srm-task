@@ -23,15 +23,16 @@ h2 {
 }
 
 #main {
-	background-image: url(https://source.unsplash.com/g_V2rt6iG7A/1600x900);
-	height: 100vh;
+	background-image: url(https://source.unsplash.com/g_V2rt6iG7A);
+	background-size: cover;
+	min-height: 100vh;
 	background-position: center;
 	position: relative;
 }
 
 #overlay {
 	z-index: 1;
-	height: 100%;
+	min-height: 100vh;
 	width: 100%;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+53,000000+83,000000+100&0.5+0,0.95+100 */
 	background: -moz-linear-gradient(
@@ -62,7 +63,7 @@ h2 {
 	padding: 2em 4em;
 	display: flex;
 	justify-content: space-between;
-	height: 8vh;
+	min-height: 8vh;
 }
 
 .brand {
@@ -87,7 +88,7 @@ h2 {
 }
 
 .banner {
-	height: 70vh;
+	min-height: 70vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -101,7 +102,7 @@ h2 {
 }
 
 .menu {
-	height: 100vh;
+	min-height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
@@ -143,6 +144,12 @@ h2 {
 }
 
 .about {
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.about-section {
 	padding: 4em 8em;
 	display: flex;
 	flex-direction: column;
@@ -150,7 +157,7 @@ h2 {
 	align-items: center;
 }
 
-.about > h1 {
+.about-section > h1 {
 	font-size: 3.5em;
 }
 
@@ -167,7 +174,7 @@ h2 {
 
 .contact {
 	padding: 4em;
-	height: 80vh;
+	min-height: 80vh;
 	/* border: white solid 1px; */
 	display: flex;
 	justify-content: center;
@@ -212,4 +219,86 @@ h2 {
 .contact > form > button {
 	height: 2.5em;
 	width: 4.5em;
+}
+
+@media (max-width: 1200px) {
+	.links {
+		display: none;
+	}
+
+	.menu {
+		grid-template-columns: 2fr 1fr;
+	}
+
+	.our-menu {
+		padding: 4em 4em;
+	}
+
+	.about {
+		grid-template-columns: 1fr 2fr;
+	}
+
+	.about-section {
+		padding: 4em 2em;
+	}
+
+	.pic > img {
+		width: 80%;
+	}
+}
+
+@media (max-width: 992px) {
+	.menu {
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr;
+	}
+
+	.our-menu {
+		padding: 0 2em;
+	}
+
+	.our-menu > h1 {
+		font-size: 2.5em;
+	}
+
+	.item-title {
+		font-size: 1.2em;
+		margin-bottom: 0.2em;
+	}
+
+	.about {
+		grid-template-rows: 2fr 1fr;
+		grid-template-columns: 1fr;
+	}
+
+	.about-section {
+		padding: 0 2em;
+		order: 1;
+	}
+
+	.about-section > h1 {
+		font-size: 2.5em;
+	}
+
+	.about > .pic {
+		order: 2;
+	}
+
+	.banner > h1 {
+		font-size: 3em;
+	}
+
+	.contact {
+		padding: 0 2em;
+	}
+
+	.contact > h1 {
+		font-size: 2.5em;
+	}
+	.contact > form {
+		width: 100%;
+	}
+	.contact > form > button {
+		width: 30%;
+	}
 }
