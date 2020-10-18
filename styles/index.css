@@ -101,7 +101,7 @@ h2 {
 	color: rgba(255, 255, 255, 1);
 }
 
-.menu {
+#menu {
 	min-height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -143,7 +143,7 @@ h2 {
 	height: auto;
 }
 
-.about {
+#about {
 	min-height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -172,7 +172,7 @@ h2 {
 	line-height: 1.5em;
 }
 
-.contact {
+#contact {
 	padding: 4em;
 	min-height: 80vh;
 	/* border: white solid 1px; */
@@ -182,51 +182,47 @@ h2 {
 	flex-direction: column;
 }
 
-.contact > h1 {
+#contact > h1 {
 	font-size: 3.5em;
 	padding-bottom: 0.5em;
 }
 
-.contact > p {
+#contact > p {
 	width: 80%;
 	opacity: 0.9;
 }
 
-.contact > form {
+#contact > form {
 	display: flex;
 	flex-direction: column;
 	width: 20%;
 	margin-top: 3em;
 }
 
-.contact > form > input {
+#contact > form > input {
 	margin-bottom: 0.5em;
 	margin-top: 0.5em;
 }
 
-.contact > form > button {
+#contact > form > button {
 	width: 20%;
 	color: black;
 }
 
-.contact > form > input {
+#contact > form > input {
 	height: 2em;
 	padding: 0 0.5em;
 	background-color: rgb(233, 233, 233);
 	color: black;
 }
 
-.contact > form > button {
+#contact > form > button {
 	height: 2.5em;
 	width: 4.5em;
 }
 
 @media (max-width: 1200px) {
-	.links {
-		display: none;
-	}
-
-	.menu {
+	#menu {
 		grid-template-columns: 2fr 1fr;
 	}
 
@@ -234,7 +230,7 @@ h2 {
 		padding: 4em 4em;
 	}
 
-	.about {
+	#about {
 		grid-template-columns: 1fr 2fr;
 	}
 
@@ -248,7 +244,22 @@ h2 {
 }
 
 @media (max-width: 992px) {
-	.menu {
+	.nav {
+		/* padding: 2em 4em; */
+		flex-direction: column;
+		/* min-height: 8vh; */
+	}
+
+	.brand {
+		justify-content: center;
+	}
+
+	.links {
+		justify-content: center;
+		margin-top: 2em;
+	}
+
+	#menu {
 		grid-template-rows: 1fr 1fr;
 		grid-template-columns: 1fr;
 	}
@@ -266,7 +277,7 @@ h2 {
 		margin-bottom: 0.2em;
 	}
 
-	.about {
+	#about {
 		grid-template-rows: 2fr 1fr;
 		grid-template-columns: 1fr;
 	}
@@ -280,7 +291,7 @@ h2 {
 		font-size: 2.5em;
 	}
 
-	.about > .pic {
+	#about > .pic {
 		order: 2;
 	}
 
@@ -288,17 +299,17 @@ h2 {
 		font-size: 3em;
 	}
 
-	.contact {
+	#contact {
 		padding: 0 2em;
 	}
 
-	.contact > h1 {
+	#contact > h1 {
 		font-size: 2.5em;
 	}
-	.contact > form {
+	#contact > form {
 		width: 100%;
 	}
-	.contact > form > button {
+	#contact > form > button {
 		width: 30%;
 	}
 }
